@@ -35,25 +35,20 @@ class MainApp extends StatelessWidget {
 
               SizedBox(height: 20),
 
-              // ÉTAPE 4 : STACK
+              // Étape 4 : Stack
               Stack(
-                alignment: Alignment.topRight, // modifié comme demandé
+                alignment: Alignment.topRight,
                 children: [
-                  // Carré de fond
                   Container(
                     width: 200,
                     height: 200,
                     color: Colors.blueAccent,
                   ),
-
-                  // Icône superposée
                   Icon(
                     Icons.star,
                     size: 100,
                     color: Colors.amber,
                   ),
-
-                  // Texte superposé
                   Text(
                     "Superposé !",
                     style: TextStyle(
@@ -61,6 +56,22 @@ class MainApp extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                ],
+              ),
+
+              SizedBox(height: 30),
+
+              // ÉTAPE 5 : Row avec icônes
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround, // modifié
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(Icons.home, color: Colors.blue, size: 40),
+                  Icon(Icons.star, color: Colors.amber, size: 40),
+                  Icon(Icons.settings, color: Colors.grey, size: 40),
+
+                  // 4ᵉ icône ajoutée
+                  Icon(Icons.phone, color: Colors.green, size: 40),
                 ],
               ),
             ],
